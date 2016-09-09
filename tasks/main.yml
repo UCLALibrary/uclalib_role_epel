@@ -1,0 +1,3 @@
+---
+- name: Add EPEL Repo
+  yum: name={{ epel_url }} state=present
