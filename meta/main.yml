@@ -1,0 +1,14 @@
+---
+
+galaxy_info:
+  author: Anthony Vuong
+  description: Ansible role to install the EPEL repository
+  license: BSD 3-Clause
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
+    versions:
+    - 6
+  categories:
+  - system
+dependencies: []
