@@ -14,7 +14,7 @@ There is one default variables for this role that can be overridden if needed:
 Example Playbook
 ----------------
 
-A simple example playbook that overrides a default variable:
+A simple example playbook that overrides a default variable:boom
 
     ---
     
