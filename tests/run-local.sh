@@ -43,7 +43,6 @@ for ((INDEX = 0; INDEX < ${#DISTROS[@]}; INDEX++)); do
   IDEMPOTENCE=$(mktemp)
 
   docker run --detach --volume="${PWD}":/etc/ansible/roles/${ROLE_NAME}:ro geerlingguy/docker-${DISTRO}-ansible:latest "${INIT}" > "${CONTAINER_ID}"
-  # Git is a dependency for ansible-galaxy, so install that first before our tests get run
   docker exec --tty "$(cat ${CONTAINER_ID})" env TERM=xterm ansible-playbook /etc/ansible/roles/${ROLE_NAME}/tests/test.yml --syntax-check
   docker exec --tty "$(cat ${CONTAINER_ID})" env TERM=xterm sed -i -e "s/#retry_files_enabled/retry_files_enabled/g" /etc/ansible/ansible.cfg
   docker exec --tty "$(cat ${CONTAINER_ID})" env TERM=xterm ansible-playbook -v /etc/ansible/roles/${ROLE_NAME}/tests/test.yml
