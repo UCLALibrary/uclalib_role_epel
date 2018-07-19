@@ -6,9 +6,11 @@ This Ansible role installs the EPEL repository so that Yum can use it.
 Role Variables
 --------------
 
-There is one default variables for this role that can be overridden if needed:
+Default variables for this role that can be overridden if needed:
 
-    epel_url: https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+    epel_repo_url - defines the URL where the EPEL rpm file is downloaded
+
+    epel_repo_file - defines the file system path where the epel repo is configured
 
 
 Example Playbook
@@ -17,12 +19,12 @@ Example Playbook
 A simple example playbook that overrides a default variable:
 
     ---
-    
+
     - hosts: all
-    
+
     # Optionally, use a different EPEL repository location
     - epel_url: https://mirrors.kernel.org/fedora-epel/6/x86_64/epel-release-6-8.noarch.rpm
-    
+
     roles:
       - { role: uclalib_role_epel }
 
