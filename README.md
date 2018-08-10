@@ -1,16 +1,16 @@
 uclalib_role_epel [![Build Status](https://travis-ci.org/UCLALibrary/uclalib_role_epel.svg?branch=master)](https://travis-ci.org/UCLALibrary/uclalib_role_epel)
 =========
 
-This Ansible role installs the EPEL repository so that Yum can use it.
+Ansible role to install the Extra Packages for Enterprise Linux (EPEL) yum repository
 
 Role Variables
 --------------
 
 Default variables for this role that can be overridden if needed:
 
-    epel_repo_url - defines the URL where the EPEL rpm file is downloaded
+* `epel_repo_url` - defines the URL where the EPEL rpm file is downloaded
 
-    epel_repo_file - defines the file system path where the epel repo is configured
+* `epel_repo_file` - defines the file system path where the epel repo is configured
 
 
 Example Playbook
