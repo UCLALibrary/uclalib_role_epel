@@ -13,3 +13,6 @@ galaxy_info:
     - 6
   categories:
   - system
+  galaxy_tags:
+    - epel
+    - repository
