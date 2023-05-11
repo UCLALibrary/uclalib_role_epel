@@ -9,4 +9,5 @@
   yum:
     name: "{{ epel_repo_url }}"
     state: present
+    disable_gpg_check: true
   when: epel_repo_file_status.stat.exists == False
