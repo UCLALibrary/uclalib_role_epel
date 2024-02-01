@@ -1,4 +1,4 @@
-uclalib_role_epel [![Build Status](https://travis-ci.org/UCLALibrary/uclalib_role_epel.svg?branch=master)](https://travis-ci.org/UCLALibrary/uclalib_role_epel)
+uclalib_role_epel
 =========
 
 Ansible role to install the Extra Packages for Enterprise Linux (EPEL) yum repository
