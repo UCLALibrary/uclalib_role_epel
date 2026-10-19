@@ -1,0 +1,6 @@
+---
+
+- name: Enable additonal RHEL 10 supporting repositories
+  command: >
+    subscription-manager repos
+    --enable codeready-builder-for-rhel-10-x86_64-rpms
